@@ -31,7 +31,7 @@ int main()
     // Imprimir los primeros 10 resultados
     for (int i = 0; i < 10; ++i)
     {
-        fmt::print("c[{}] = {}\n", i, h_c[i]);
+        fmt::print("El vector Resultamte es [{}] = {}\n", i, h_c[i]);
     }
     // Liberar memoria en el GPU
     cudaFree(d_A);

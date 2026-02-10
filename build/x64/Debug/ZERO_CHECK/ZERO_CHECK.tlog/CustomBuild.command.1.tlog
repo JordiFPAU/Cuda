@@ -1,0 +1,10 @@
+^C:\TOOLS\PROG_PARALELA\REPASO_EXAMEN\CUDA\BUILD\CMAKEFILES\F7CAC9807F15CC149F8E72B3EE6B4EBE\GENERATE.STAMP.RULE
+setlocal
+C:\tools\mingw64\bin\cmake.exe -SC:/tools/prog_paralela/Repaso_Examen/CUDA -BC:/tools/prog_paralela/Repaso_Examen/CUDA/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/tools/prog_paralela/Repaso_Examen/CUDA/build/EvaluacionSumativa.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

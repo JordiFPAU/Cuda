@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/tools/prog_paralela/Repaso_Examen/CUDA/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

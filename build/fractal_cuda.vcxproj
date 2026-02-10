@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{59F4D452-0055-3A2C-B92D-3B6E982F13AF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>fractal_cuda</ProjectName>
+    <CudaToolkitCustomDir>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\</CudaToolkitCustomDir>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\extras\visual_studio_integration\MSBuildExtensions\CUDA 13.1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">fractal_cuda.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">fractal_cuda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">fractal_cuda.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">fractal_cuda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">fractal_cuda.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">fractal_cuda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">fractal_cuda.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">fractal_cuda</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/tools/vcpkg/installed/x64-windows/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include/cccl" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;FMT_SHARED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;FMT_SHARED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;FMT_SHARED;CMAKE_INTDIR="Debug"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_75,code=[compute_75,sm_75] -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/tools/prog_paralela/Repaso_Examen/CUDA/build/Debug/fractal_cuda.exe -installedDir C:/tools/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\tools\vcpkg\installed\x64-windows\debug\lib\fmtd.lib;C:\tools\vcpkg\installed\x64-windows\debug\lib\sfml-graphics-d.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\lib\x64\cudart.lib;C:\tools\vcpkg\installed\x64-windows\debug\lib\sfml-window-d.lib;C:\tools\vcpkg\installed\x64-windows\debug\lib\sfml-system-d.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/Debug/fractal_cuda.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/Debug/fractal_cuda.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler=" -Zi -Ob0 -Od /RTC1" "--generate-code=arch=compute_75,code=[compute_75,sm_75]" -Xcompiler=-MDd</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/tools/vcpkg/installed/x64-windows/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include/cccl" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR="Release"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_75,code=[compute_75,sm_75] -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/tools/prog_paralela/Repaso_Examen/CUDA/build/Release/fractal_cuda.exe -installedDir C:/tools/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\tools\vcpkg\installed\x64-windows\lib\fmt.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-graphics.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\lib\x64\cudart.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-window.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-system.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/Release/fractal_cuda.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/Release/fractal_cuda.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler="-O2 -Ob2" -DNDEBUG "--generate-code=arch=compute_75,code=[compute_75,sm_75]" -Xcompiler=-MD</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/tools/vcpkg/installed/x64-windows/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include/cccl" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR="MinSizeRel"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_75,code=[compute_75,sm_75] -Xcompiler="/EHsc -Ob1"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <Optimization>O1</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/tools/prog_paralela/Repaso_Examen/CUDA/build/MinSizeRel/fractal_cuda.exe -installedDir C:/tools/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\tools\vcpkg\installed\x64-windows\lib\fmt.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-graphics.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\lib\x64\cudart.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-window.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-system.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/MinSizeRel/fractal_cuda.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/MinSizeRel/fractal_cuda.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler="-O1 -Ob1" -DNDEBUG "--generate-code=arch=compute_75,code=[compute_75,sm_75]" -Xcompiler=-MD</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/tools/vcpkg/installed/x64-windows/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include" /external:I "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/include/cccl" /utf-8</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Include>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(Include)</Include>
+      <Defines>%(Defines);_WINDOWS;NDEBUG;FMT_SHARED;CMAKE_INTDIR="RelWithDebInfo"</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -std=c++17 --generate-code=arch=compute_75,code=[compute_75,sm_75] -Xcompiler="/EHsc -Zi -Ob1"</AdditionalOptions>
+      <CodeGeneration></CodeGeneration>
+      <CompileOut>$(IntDir)%(Filename).obj</CompileOut>
+      <CudaRuntime>Static</CudaRuntime>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <TypeInfo>true</TypeInfo>
+      <UseHostInclude>false</UseHostInclude>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\tools\vcpkg\installed\x64-windows\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\include\cccl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/tools/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/tools/prog_paralela/Repaso_Examen/CUDA/build/RelWithDebInfo/fractal_cuda.exe -installedDir C:/tools/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>C:\tools\vcpkg\installed\x64-windows\lib\fmt.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-graphics.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\lib\x64\cudart.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-window.lib;C:\tools\vcpkg\installed\x64-windows\lib\sfml-system.lib;cudadevrt.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.1/lib/x64/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/RelWithDebInfo/fractal_cuda.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/tools/prog_paralela/Repaso_Examen/CUDA/build/RelWithDebInfo/fractal_cuda.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <CudaLink>
+      <AdditionalOptions>-forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler=" -Zi -O2 -Ob1" -DNDEBUG "--generate-code=arch=compute_75,code=[compute_75,sm_75]" -Xcompiler=-MD</AdditionalOptions>
+      <PerformDeviceLink>true</PerformDeviceLink>
+    </CudaLink>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\tools\prog_paralela\Repaso_Examen\CUDA\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/tools/prog_paralela/Repaso_Examen/CUDA/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\tools\mingw64\bin\cmake.exe -SC:/tools/prog_paralela/Repaso_Examen/CUDA -BC:/tools/prog_paralela/Repaso_Examen/CUDA/build --check-stamp-file C:/tools/prog_paralela/Repaso_Examen/CUDA/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCUDAInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindCUDAToolkit.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCUDACompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCXXCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeRCCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeSystem.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfig.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfigVersion.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets.cmake;C:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/tools/prog_paralela/Repaso_Examen/CUDA/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\tools\mingw64\bin\cmake.exe -SC:/tools/prog_paralela/Repaso_Examen/CUDA -BC:/tools/prog_paralela/Repaso_Examen/CUDA/build --check-stamp-file C:/tools/prog_paralela/Repaso_Examen/CUDA/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCUDAInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindCUDAToolkit.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCUDACompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCXXCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeRCCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeSystem.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfig.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfigVersion.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets.cmake;C:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/tools/prog_paralela/Repaso_Examen/CUDA/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\tools\mingw64\bin\cmake.exe -SC:/tools/prog_paralela/Repaso_Examen/CUDA -BC:/tools/prog_paralela/Repaso_Examen/CUDA/build --check-stamp-file C:/tools/prog_paralela/Repaso_Examen/CUDA/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCUDAInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindCUDAToolkit.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCUDACompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCXXCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeRCCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeSystem.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfig.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfigVersion.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets.cmake;C:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/tools/prog_paralela/Repaso_Examen/CUDA/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\tools\mingw64\bin\cmake.exe -SC:/tools/prog_paralela/Repaso_Examen/CUDA -BC:/tools/prog_paralela/Repaso_Examen/CUDA/build --check-stamp-file C:/tools/prog_paralela/Repaso_Examen/CUDA/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCUDAInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeRCInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Compiler\NVIDIA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindCUDAToolkit.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Linker\MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows-NVIDIA-CUDA.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\Windows.cmake;C:\tools\mingw64\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCUDACompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeCXXCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeRCCompiler.cmake;C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\4.1.2\CMakeSystem.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config-version.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-config.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\fmt\fmt-targets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLAudioSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfig.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLConfigVersion.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLGraphicsSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLNetworkSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLSystemSharedTargets.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-debug.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets-release.cmake;C:\tools\vcpkg\installed\x64-windows\share\sfml\SFMLWindowSharedTargets.cmake;C:\tools\vcpkg\scripts\buildsystems\vcpkg.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\tools\prog_paralela\Repaso_Examen\CUDA\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\tools\prog_paralela\Repaso_Examen\CUDA\main.cpp" />
+    <CudaCompile Include="..\kernel.cu" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\tools\prog_paralela\Repaso_Examen\CUDA\build\ZERO_CHECK.vcxproj">
+      <Project>{3AFA7F82-5661-3946-90B0-0D841CF8C3D7}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\extras\visual_studio_integration\MSBuildExtensions\CUDA 13.1.targets" />
+  </ImportGroup>
+</Project>
